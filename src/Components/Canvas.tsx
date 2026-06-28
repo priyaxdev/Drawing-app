@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import useDrawingStore from "../store/useDrawingStore";
 
-const Canvas = ({ canvasRef }: { canvasRef: React.RefObject<HTMLCanvasElement> }) => {
+const Canvas = ({ canvasRef }: { canvasRef: React.RefObject<HTMLCanvasElement | null> }) => {
   const isDrawing = useRef<boolean>(false);
   const lastX = useRef<number>(0);
   const lastY = useRef<number>(0);
