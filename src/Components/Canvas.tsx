@@ -21,6 +21,7 @@ const Canvas = ({ canvasRef }: { canvasRef: React.RefObject<HTMLCanvasElement | 
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    if (!ctx) return;
     if (tool === "erase") {
       ctx.globalCompositeOperation = "destination-out";
     } else {
@@ -46,6 +47,7 @@ const Canvas = ({ canvasRef }: { canvasRef: React.RefObject<HTMLCanvasElement | 
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    if (!ctx) return;
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     pushHistory(imageData);
   };
