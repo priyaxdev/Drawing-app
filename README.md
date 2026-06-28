@@ -1,75 +1,45 @@
-# React + TypeScript + Vite
+# 🖌️ Drawing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A freehand drawing app built with React, TypeScript, Canvas API and Zustand.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+https://drawing-app-dc8v.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Screenshot
 
-## React Compiler
+<img width="2938" height="1382" alt="image" src="https://github.com/user-attachments/assets/e5a39d68-b481-4144-bce6-c45cb995b33f" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## ✨ Features
+- Freehand drawing on canvas
+- 8 preset colors + custom color picker
+- Adjustable brush size
+- Eraser tool
+- Undo support
+- Download drawing as PNG
+- Clear canvas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Zustand (global state)
+- Canvas API (native browser)
+- Vite
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+## 🚀 Run Locally
+```bash
+git clone https://github.com/your-username/drawing-app.git
+cd drawing-app
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📚 What I Learned
+- Canvas API — drawing, coordinates, getImageData/putImageData
+- useRef — DOM access without re-renders
+- Zustand — global state management
+- Ref lifting pattern in React
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+## 👩‍💻 Author
+**Priya**
